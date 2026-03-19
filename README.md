@@ -34,8 +34,22 @@ const subtrair = (a: number, b: number): number => a - b;
 
 console.log(somar(5, 3)); // Saída: 8
 
+Jv:Para criar uma função (método) em Java, defina seu modificador de acesso (ex: public), tipo de retorno (ex: void ou int), nome, parâmetros entre parênteses e o bloco de código {}. Métodos devem ter responsabilidade única e, preferencialmente, serem descritivos, como public int somar(int a, int b) { return a + b; }.
+
+modificadorRetorno nomeDaFuncao(parametros) {
+    // Corpo do método
+    // return valor; // Necessário se não for void
+}
 
 
+JS:
+FUNCTION
+function saudar() {
+    console.log("Olá, bem-vindo!");
+}
+Method
 
+variable
+attribute /fazer depois/
 
 
