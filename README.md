@@ -3,6 +3,7 @@
 HTML: Html é uma linguagem de marcação, onde ele serve para estrutuar o site.
 
 Css: Css serve para dar uma "maquiagem" para o site. Ele é quem faz a interface para o site.
+
 ===================================================================================================================================================================
 
 #Js (JavaScript) vs Ts(Type Scipt) Vs Jv(Java)
@@ -40,6 +41,7 @@ modificadorRetorno nomeDaFuncao(parametros) {
     // Corpo do método
     // return valor; // Necessário se não for void
 }
+
 ===========================================================================================================================================================
 
 JS:
