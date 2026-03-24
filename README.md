@@ -154,4 +154,30 @@ class Produto {
     }
 }
 
+=========================================================================================================================================================================
+
+GET E SET
+
+Get: Usado para ler o valor de uma propriedade.
+Set: Usado para alterar o valor de uma propriedade.
+
+
+class Pessoa {
+  private _idade: number = 0;
+
+  get idade(): number {
+    return this._idade;
+  }
+
+  set idade(novaIdade: number) {
+    if (novaIdade < 0) {
+      throw new Error("Idade não pode ser negativa");
+    }
+    this._idade = novaIdade;
+  }
+}
+
+const pessoa = new Pessoa();
+pessoa.idade = 25; // Chama o set
+console.log(pessoa.idade); // Chama o get
     
