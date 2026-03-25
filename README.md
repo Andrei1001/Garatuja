@@ -176,6 +176,11 @@ class Pessoa {
     this._idade = novaIdade;
   }
 }
+=========================================================================================================================================================================
+
+DIFERENÇA ENTRE METODO E FUNÇÃO
+
+funções são blocos de código independentes chamados pelo nome, enquanto métodos são funções associadas a um objeto ou classe
 
 const pessoa = new Pessoa();
 pessoa.idade = 25; // Chama o set
