@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOJO BIZARRE ADVENTURES</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cabin:ital,wght@0,400..700;1,400..700&family=Iosevka+Charon:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Roboto+Slab:wght@100..900&display=swap');
+
+        body {
+
+            color: #000000;
+            font-family: "Noto Sans KR", sans-serif;
+            padding: 2rem;
+            margin: 0;
+            min-height: 100vh;
+            background-image: url("image\ copy.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+
+            display: grid;
+            grid-template-areas:
+                "social aside main"
+                "footer footer footer";
+            grid-template-rows: auto 120px;
+            grid-template-columns: 120px minmax(260px, 330px) 1fr;
+            gap: 1.5rem;
+            font-size: larger;
+            font-weight: bold;
+
+
+        }
+
+
+        body>* {
+
+
+            padding: 20px;
+            border: none;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+
+
+
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.25),
+                inset 0 1px 2px rgba(255, 255, 255, 0.4);
+
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        main {
+            grid-area: main;
+            padding: 0rem 2rem 0rem 2rem;
+        }
+
+        aside {
+
+            grid-area: aside;
+            text-align: center;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(244, 3, 224, 0.548);
+
+        }
+
+        .social {
+
+            padding: 1rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            grid-area: social;
+            border-radius: 8px;
+            height: 330px;
+            background: transparent;
+            border: none;
+            box-shadow:
+
+                inset 6px 6px 12px rgba(0, 0, 0, 0.25),
+                inset -6px -6px 12px rgba(255, 255, 255, 0.25);
+            transition: transform 0.3s ease;
+        }
+
+        .social:hover {
+            transform: scale(1.03);
+            box-shadow:
+                6px 6px 12px rgba(0, 0, 0, 0.25),
+                -6px -6px 12px rgba(255, 255, 255, 0.40);
+        }
+
+        .descricao {
+            font-weight: 700;
+            font-size: 10px;
+        }
+
+        .social>* {
+            margin: 0.5rem;
+
+        }
+
+        footer {
+            grid-area: footer;
+            background-color: rgba(22, 76, 133, 0.605);
+
+
+
+            padding: 20px;
+            border: none;
+        }
+
+        .social img {
+            border-radius: 50%;
+
+        }
+
+        p {
+            font-size: 20px;
+            padding: 1rem;
+        }
+
+        .foto-perfil {
+            transition: transform 0.3s ease;
+            width: 210px;
+            height: 210px;
+            border-radius: 50%;
+            z-index: 2;
+            margin: 1rem;
+            border: 3px solid rgba(255, 255, 255, 0.35);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.25),
+                0 0 15px rgba(255, 255, 255, 0.1);
+
+
+        }
+
+        .foto-perfil:hover {
+            transform: scale(1.05);
+        }
+
+        .portfolio {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+            grid-auto-rows: minmax(400px, auto);
+        }
+
+        .descricao {
+            background-color: rgba(230, 238, 17, 0.853);
+            height: 100%;
+
+
+            gap: 1.5rem;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%s);
+
+        }
+
+        .portfolio img {
+            width: 100%;
+            margin: 0;
+            object-fit: cover;
+        }
+
+
+        .portfolio div img {
+            border-radius: 12px;
+            margin: 0;
+
+        }
+
+        .portfolio div {
+            padding: 1rem;
+            overflow: hidden;
+            margin: 0.5rem;
+            background-color: rgba(28, 128, 143, 0.59);
+
+
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            flex-direction: column;
+            border-radius: 16px;
+
+            box-shadow:
+
+                inset 6px 6px 12px rgba(0, 0, 0, 0.35),
+                inset -6px -6px 12px rgba(255, 255, 255, 0.40);
+
+
+
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+
+        .portfolio div:hover {
+            transform: scale(1.03);
+
+            box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.35),
+                -6px -6px 12px rgba(255, 255, 255, 0.40);
+
+        }
+
+        .portfolio div:hover img {
+            transition: transform 0.6s ease, box-shadow 0.3s ease;
+            transform: scale(1.08);
+
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        a {
+            padding: 0.5rem;
+            border-radius: 10px;
+
+
+
+        }
+
+        a:hover {
+            transition: transform 0.3s ease-in-out;
+            transform: scale(1.2) rotate(7deg);
+        }
+
+        h2 {
+
+            font-size: 45px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        h3 {
+            font-size: 30px;
+        }
+
+        h4 {
+
+            font-size: 100px;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: rgb(215, 218, 73);
+        }
+
+        .galeria div {
+            display: flex;
+            text-align: start;
+            justify-content: space-around;
+            flex-wrap: wrap
+        }
+
+
+        .galeria img {
+
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px;
+            width: 30rem;
+            margin: 2rem;
+            border: 3px solid rgba(255, 255, 255, 0.35);
+
+            box-shadow:
+                0 10px 25px rgba(0, 0, 0, 0.25),
+                0 0 15px rgba(255, 255, 255, 0.1);
+            transition: transform 0.7s ease;
+        }
+
+        .galeria img:hover {
+            transform: scale(1.17);
+
+        }
+
+        abbr {
+            text-decoration: none;
+        }
+    </style>
+    <aside>
+        <div class="descricao">
+            <div class="imagemPerfil">
+                <img class="foto-perfil" src="image1.png" alt="foto de johnny joestar na dark determination">
+            </div>
+
+
+            <p>Johnny Joestar é o protagonista de JoJo's Bizarre Adventure Part 7: Steel Ball Run, obra criada por
+                Hirohiko Araki. Ele era um jovem jóquei muito famoso, mas sua vida mudou completamente após levar um
+                tiro que o deixou paralisado da cintura para baixo. Sentindo que perdeu tudo, Johnny decide participar
+                da corrida Steel Ball Run, que atravessa os Estados Unidos. Durante a jornada, ele conhece Gyro Zeppeli,
+                que o ensina a técnica do Spin, permitindo que Johnny desenvolva seu Stand chamado Tusk. Ao longo da
+                corrida, Johnny amadurece, enfrenta diversos inimigos e busca recuperar seu propósito na vida.</p>
+        </div>
+        </div>
+    </aside>
+    <main>
+        <h2>STEEL BALL RUN</h2>
+        <section class="portfolio">
+            <div>
+                <h3><abbr title="Stand de johnny joestar.">TUSK ATO 4 </abbr></h3>
+                <p>O Tusk Act 4 é a forma final do Stand de Johnny Joestar em JoJo's Bizarre Adventure: Steel Ball Run.
+                    Ele representa o poder máximo da técnica do Spin, permitindo que Johnny dispare suas unhas com uma
+                    rotação infinita. Essa rotação cria um efeito chamado “Infinite Rotation”, que prende o inimigo em
+                    um movimento eterno do qual é quase impossível escapar. O Tusk Act 4 é extremamente poderoso e foi
+                    capaz de derrotar até mesmo habilidades muito fortes, como a de Funny Valentine. Por causa disso,
+                    ele é considerado um dos Stands mais fortes de todo o universo de JoJo.
+                </p>
+                <img src="image3.png" alt="tusk ato 4 mostrando sue poder">
+            </div>
+
+            <div>
+                <h3><abbr title="Melhor amigo de Johnny joestar">Gyro Zeppeli</abbr></h3>
+                <p>Ele é um cavaleiro e médico do Reino da Nápoles que participa da corrida Steel Ball Run pelos Estados
+                    Unidos. Gyro utiliza a técnica chamada Spin, usando esferas de aço que giram com uma rotação
+                    especial capaz de atacar inimigos e também curar pessoas. Durante a corrida ele se torna amigo e
+                    mentor de Johnny Joestar, ajudando-o a aprender o Spin. Gyro é conhecido por sua personalidade
+                    carismática, senso de justiça e por lutar para salvar um jovem condenado injustamente.</p>
+                <img src="image2.png" alt="gyro Zeppeli se protegendo da neve">
+            </div>
+
+            <div>
+                <h3>Diego Brando</h3>
+                <p>Ele é um famoso jóquei que participa da corrida Steel Ball Run nos Estados Unidos. Ambicioso e muito
+                    competitivo, Diego quer vencer a corrida para alcançar poder e riqueza. Durante a história ele
+                    desperta seu Stand chamado Scary Monsters, que lhe permite se transformar em um dinossauro e também
+                    transformar outras pessoas em dinossauros. Diego é conhecido por sua inteligência, frieza e
+                    rivalidade com Johnny Joestar e Gyro Zeppeli.</p>
+                <img src="image4.png" alt="Diego Brando na forma meio dinossauro">
+            </div>
+
+            <div>
+                <h3>Jesus Cristo</h3>
+                <p>Na história, partes do seu corpo sagrado foram espalhadas pelo mundo e possuem poderes especiais.
+                    Esses restos sagrados atraem vários personagens que desejam obter seu poder. Durante a corrida Steel
+                    Ball Run, eles têm grande importância para o desenvolvimento da história e influenciam o destino de
+                    personagens como Johnny Joestar.</p>
+                <img src="image5.png" alt="jesus de costas falando com o johnny">
+            </div>
+
+            <div>
+                <h3>Funny Valentine</h3>
+                <p>Funny Valentine é o principal antagonista de JoJo's Bizarre Adventure Part 7: Steel Ball Run, criado
+                    por Hirohiko Araki. Ele é o presidente dos Estados Unidos e organiza a corrida Steel Ball Run como
+                    parte de um plano para reunir as partes do Corpo Sagrado. Seu objetivo é usar esse poder para trazer
+                    prosperidade ao seu país, mesmo que isso cause sofrimento em outras partes do mundo. Valentine
+                    possui o Stand Dirty Deeds Done Dirt Cheap (D4C), que permite viajar entre universos paralelos e
+                    trocar lugares com outras versões de si mesmo.
+                </p>
+                <img src="image6.png" alt="funny Valentine com seu Stand">
+            </div>
+        </section>
+        <section class="galeria">
+            <div>
+                <h4>Galeria muito pika</h4>
+                <img src="johnny-joestar-diego-brando-funny-valentine-part-7-featured-image.avif" alt="">
+                <img src="jojos-bizarre-adventure-johnny-gyro.avif" alt="">
+                <img src="Valentine_Powered.JPG.webp" alt="">
+                <img src="3b4602577f3b7ec70c0fac68e430e1c5.jpg" alt="">
+                <img src="images.jpg" alt="">
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&Andrei Diz Schmitt. Todos os direito reservados </p>
+    </footer>
+    <div class="social">
+        <a href="https://www.facebook.com/" target="_blank">
+            <img src="facebook.png" alt="logo do facebook">
+        </a>
+        <a href="https://www.instagram.com/" target="_blank">
+            <img src="imageA.png" alt="logo do instagram">
+        </a>
+        <a href="https://www.twitter.com/" target="_blank">
+            <img src="image.png" alt="logo do twitter">
+        </a>
+    </div>
+
+</body>
+
+</html>
