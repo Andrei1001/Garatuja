@@ -188,4 +188,42 @@ funções são blocos de código independentes chamados pelo nome, enquanto mét
 const pessoa = new Pessoa();
 pessoa.idade = 25; // Chama o set
 console.log(pessoa.idade); // Chama o get
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const srv = Bun.serve({
+    port: 8080,
+    routes: {
+        "/goku": () => new Response(         
+            `<a href='https://www.reddit.com/r/brasilivre/comments/klpyrk/goku_careca/'>clica</a> `, 
+            { headers: { "Content-Type": "text/html"}}
+        )
+    }
+    , fetch(request) {
+        return new Response("OLA", {headers: {'content-Type': "text/html"}})
+    }
+
+}) 
     
